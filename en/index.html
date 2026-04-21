@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PKU Cookbook</title>
+    <link rel="alternate" hreflang="nl" href="https://pkuproef.nl/nl/">
+    <link rel="alternate" hreflang="en" href="https://pkuproef.nl/en/">
+    <link rel="alternate" hreflang="x-default" href="https://pkuproef.nl/nl/">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../menu.js"></script>
+</head>
+<body>
+    <!-- SVG Sprite for icons -->
+    <svg style="display: none;">
+        <defs>
+            <symbol id="chevron-down" viewBox="0 0 24 24">
+                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+            </symbol>
+            <symbol id="chevron-up" viewBox="0 0 24 24">
+                <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+            </symbol>
+        </defs>
+    </svg>
+
+    <!-- Menu is loaded by menu.js -->
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1>PKU PROOF cooking fun</h1>
+                    <p>Low-protein cooking has never tasted this good!</p>
+                    <a href="#what-is-pku" class="cta-button">More information</a>
+                </div>
+                <div class="hero-images">
+                    <img src="../Images/PKU-Proof-Part-1-Cover-English-Version.png" alt="PKU Cookbook Part 1" class="cover-image">
+                    <img src="../Images/PKU-Proef-Deel-2-Cover.png" alt="PKU Kookboek Deel 2" class="cover-image">
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="text-content">
+                        <p>After years of recipes in binders, we decided it was high time: in 2015 our first cookbook 'PKU PROOF: 101 delicious low-protein recipes' was launched. Since then, over 1,000 copies have been sold as the go-to book for low-protein cooking. This book was published in both Dutch and English.</p>
+
+                        <p>Ten years later - in 2025 - we published our second cookbook 'PKU PROEF Doorproeven'. Full of new modern low-protein recipes and worldly flavors of our time. This book is unfortunately only available in Dutch and can still be <a href='order.html'>ordered</a>.</p>
+
+                        <p>But PKU PROOF is more than just two amazing cookbooks. You can also be inspired by new dishes and products by following us on <a href='https://www.facebook.com/PKUPROEF' target='_blank'>Facebook</a> (the largest PKU community of the Benelux), <a href='https://nl.pinterest.com/pkuproef/' target='_blank'>Pinterest</a> or <a href='https://www.instagram.com/pku_proef/' target='_blank'>Instagram</a>. Cook along in workshops we organise or in the online PKU PROEF Cooking Studio, with videos you can find on our <a href='https://www.youtube.com/@PkuproefNlKookstudio' target='_blank'>YouTube channel</a>.</p>
+
+                        <p>So keep following us, so we can keep surprising you!</p>
+
+                        <p>Low-protein greetings,<br>Dagmar &amp; Marianne<br>(Mother &amp; aunt of 2 PKU patients)</p>
+                    </div>
+                    <div class="image-placeholder">
+                        <img src="../Images/PKU_PROEF_Dagmar_en_Marianne.jpg" alt="Dagmar and Marianne of PKU PROOF">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="what-is-pku" class="content-section alt-bg">
+            <div class="container">
+                <h2>What is PKU?</h2>
+                <div class="content-grid">
+                    <div class="image-placeholder">
+                        <img src="../Images/PKU_Proef_pizza.jpg" alt="PKU PROOF Pizza">
+                    </div>
+                    <div class="text-content">
+                        <div id="pku-text-container" class="pku-text-collapsed">
+                            <p>PKU stands for phenylketonuria, and is a rare, incurable, inherited metabolic disorder that occurs in about 1 in 18,000 newborns. If you have PKU, your liver is not able to process one specific component of proteins. That culprit, the amino acid phenylalanine (Phe), therefore accumulates in your blood and hinders the growth and development of the brain. Untreated, PKU leads to brain damage. In most countries, newborns are checked for PKU with the heel prick. If PKU is detected in a baby, treatment is started immediately.</p>
+                            <p>That treatment should prevent the accumulation of the amino acid phenylalanine in the body. But that amino acid is a natural part of almost all food. This is why PKU patients follow a strict low protein diet throughout their lives. No meat, no fish, no cereals, no milk, no soy and no nuts, but a lot of fruit and vegetables.</p>
+
+                            <div id="pku-text-extra" style="display: none;">
+                                <p>Because you get too few nutrients in this diet, PKU patients take a special Phe-free preparation several times a day, which contains all the missing amino acids and minerals. PKU patients are under the strict supervision of a dietitian, regularly go to the hospital and regularly send blood from their finger (auch!) to check their protein housekeeping.</p>
+                                <p>If you follow the diet and take your preparations, you can lead a relatively 'normal' life. More information about the medical side of PKU and new developments can be found on the website of the <a href='https://pkuvereniging.nl/' target='_blank'>PKU Vereniging</a> (Dutch PKU Association).</p>
+                            </div>
+
+                            <button id="toggle-pku-text" onclick="togglePKUText()" class="read-more-btn">
+                                <span class="toggle-text">Read more</span>
+                                <svg class="chevron-icon" width="20" height="20" fill="currentColor">
+                                    <use href="#chevron-down"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ontstaan" class="content-section">
+            <div class="container">
+                <h2>About the cookbooks</h2>
+                <div class="content-grid">
+                    <div class="text-content">
+                        <p>The first PKU cookbook contains 101 low-protein recipes. In the cookbook you will find soups, side dishes, salads, pizzas, pasta and rice dishes, stews and curries, potato dishes, vegetable dishes, snacks, desserts and pastries. Half of the recipes have a tasty photo showing the end result.</p>
+
+                        <p>Our second cookbook contains 80 recipes with once again - at the request of our supporters - a photo of the dish with every recipe. In the book you will find starters, main courses, meat and fish substitutes, side dishes, desserts, breakfast &amp; lunch dishes, savoury and sweet snacks and biscuits &amp; pastries.</p>
+
+                        <p>All recipes provide a step-by-step description of how to prepare the dish. Sometimes useful tips are given, so that you can easily vary. Of course, each dish contains a list of the ingredients you need, with the associated protein and Phenyl values. This makes it easy to incorporate dishes into your diet. These overviews are also useful if you want to leave out ingredients because you don't like them. Or if you want to add things and vary. Most of the ingredients are readily available in the supermarket, sometimes combined with special low-protein products (such as pasta and flour) that you can usually easily order online.</p>
+
+                        <p>For determining the protein values, we used various reputable sources, the most important being <a href="https://www.voedingswaardetabel.nl/" target="_blank">voedingswaardetabel.nl</a> and <a href="https://nevo-online.rivm.nl/" target="_blank">nevo-online.rivm.nl</a>. Both books have been reviewed by dietitians specialised in PKU.</p>
+                    </div>
+                    <div class="image-placeholder">
+                        <img src="../Images/PKU-Proef-Cupcakes.jpg" alt="PKU PROOF Cupcakes">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="over-kookboek" class="content-section alt-bg">
+            <div class="container">
+                <h2>Impression</h2>
+                <div class="features-grid features-grid-two">
+                    <div class="feature-card feature-card-image">
+                        <img src="../Images/Sfeerimpressie-PKU-Doorproeven_Stoof-small.jpg" alt="PKU Stew">
+                    </div>
+                    <div class="feature-card feature-card-image">
+                        <img src="../Images/Sfeerimpressie-PKU-Doorproeven_Verjaardagstaart-small.jpg" alt="PKU Birthday Cake">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2015 PKU Proef. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
