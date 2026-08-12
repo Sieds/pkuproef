@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PKU Kookboek - Pagina niet gevonden</title>
+    <meta name="robots" content="noindex">
+    <meta http-equiv="refresh" content="0; url=/nl/index.html">
+    <script>
+        // Onbekende URL: stuur door naar de site (EN op basis van browsertaal, anders NL)
+        const userLang = navigator.language || navigator.userLanguage;
+        if (userLang.startsWith('en')) {
+            window.location.href = '/en/index.html';
+        } else {
+            window.location.href = '/nl/index.html';
+        }
+    </script>
+</head>
+<body>
+    <p>Pagina niet gevonden. Doorverwijzen... / Page not found. Redirecting...</p>
+    <p><a href="/nl/index.html">Nederlands</a> | <a href="/en/index.html">English</a></p>
+</body>
+</html>
