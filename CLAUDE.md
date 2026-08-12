@@ -74,12 +74,14 @@ The site is deployed via **GitHub Pages**. Each push to `main` triggers an autom
 
 ### Hosting migration status
 
-Migration from Hosting.nl to GitHub Pages is **in progress**:
+Migration from Hosting.nl to GitHub Pages is **effectively complete** — `pkuproef.nl` now serves from GitHub Pages over HTTPS:
 - ✅ Repo on GitHub, Pages deploying successfully
 - ✅ `CNAME` file committed with `pkuproef.nl`
-- ⏳ **Pending**: DNS records at **Combell** (the domain registrar — hosting and DNS live at different providers: hosting at Hosting.nl, DNS/domain at Combell)
-- ⏳ Pending: enable "Enforce HTTPS" in Pages settings (only available after DNS check passes)
-- ⏳ Pending: decommission Hosting.nl once `pkuproef.nl` serves from GitHub
+- ✅ DNS live at **Combell**: apex A-records + `www` CNAME point to GitHub Pages (verified against Combell's authoritative nameservers)
+- ✅ HTTPS certificate issued; `https://pkuproef.nl` returns 200 from GitHub
+- ✅ Old-URL handling: the old site was a WordPress one-pager, so `/` and its `?query` variants land on the site; unknown paths are caught by `/404.html`, which redirects to the site (EN by browser language, otherwise NL)
+- ⏳ Pending: enable "Enforce HTTPS" in Pages settings (web UI; available now that the cert is issued)
+- ⏳ Pending: decommission the Hosting.nl **web hosting** — keep the domain/DNS at Combell and email via mailprotect.be
 
 ### DNS records to configure at Combell
 
