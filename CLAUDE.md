@@ -64,4 +64,34 @@ Each page has a hero section with book cover images:
 - **Kookvideo/Videos**: YouTube image (450px wide, top-aligned)
 
 ### Deployment
-The site is planned to be deployed on **GitHub Pages** with custom domain `pkuproef.nl`. Currently hosted at Hosting.nl. Not yet deployed to GitHub — this is a next step.
+
+The site is deployed via **GitHub Pages**. Each push to `main` triggers an automatic deploy (see the Actions tab for build status).
+
+- **GitHub repo**: https://github.com/Sieds/pkuproef
+- **GitHub Pages source**: branch `main`, folder `/ (root)` — configured in repo Settings → Pages
+- **Custom domain**: `pkuproef.nl`, set via the `/CNAME` file at the repo root (also reflected in Pages settings)
+- **Fallback URL**: `https://sieds.github.io/pkuproef/` — redirects to the custom domain when Pages has a CNAME configured
+
+### Hosting migration status
+
+Migration from Hosting.nl to GitHub Pages is **in progress**:
+- ✅ Repo on GitHub, Pages deploying successfully
+- ✅ `CNAME` file committed with `pkuproef.nl`
+- ⏳ **Pending**: DNS records at **Combell** (the domain registrar — hosting and DNS live at different providers: hosting at Hosting.nl, DNS/domain at Combell)
+- ⏳ Pending: enable "Enforce HTTPS" in Pages settings (only available after DNS check passes)
+- ⏳ Pending: decommission Hosting.nl once `pkuproef.nl` serves from GitHub
+
+### DNS records to configure at Combell
+
+Replace any existing A-records for the apex (`@` / `pkuproef.nl`) that point to Hosting.nl with these four A-records pointing to GitHub Pages:
+
+```
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
+
+Plus one CNAME for `www` → `sieds.github.io.`
+
+**Do not touch** MX (email) or TXT records at Combell.
